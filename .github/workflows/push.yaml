@@ -18,17 +18,3 @@ jobs:
           command: cat output.txt
       - name: Read GCC information from a file, x86_64
         run: cat output.txt
-  test_latest_tag:
-    runs-on: ubuntu-latest
-    name: Validate latest tag
-    steps:
-      - name: Store GCC information in a file
-        uses: qtxie/ubuntu-18.04-x86@0.1
-        with:
-          command: gcc -v 2> output.txt
-      - name: Read GCC information from a file, x86
-        uses: qtxie/ubuntu-18.04-x86@0.1
-        with:
-          command: cat output.txt
-      - name: Read GCC information from a file, x86_64
-        run: cat output.txt
