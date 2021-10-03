@@ -1,3 +1,3 @@
 #!/bin/sh -l
-set -x
-exec bash -x -c "$1"
+
+rebol -qw --do "print 32"
