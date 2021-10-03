@@ -9,11 +9,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Store GCC information in a file
-        uses: ./ # Uses an action in the root directory
+        uses: ./CI # Uses an action in the root directory
         with:
           command: gcc -v 2> output.txt
       - name: Read GCC information from a file, x86
-        uses: ./
+        uses: ./CI
         with:
           command: cat output.txt
       - name: Read GCC information from a file, x86_64
