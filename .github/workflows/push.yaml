@@ -11,7 +11,7 @@ jobs:
       - name: Store GCC information in a file
         uses: ./CI # Uses an action in the root directory
         with:
-          command: gcc -v 2> output.txt
+          command: rebol -qw --do "print 32" > output.txt
       - name: Read GCC information from a file, x86
         uses: ./CI
         with:

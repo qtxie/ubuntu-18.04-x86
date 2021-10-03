@@ -1,4 +1,3 @@
 #!/bin/sh -l
-
-echo "Hello"
-rebol -qw --do "print 32"
+set -x
+exec bash -x -c "$1"
